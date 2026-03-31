@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IDIT - Instituto Dominicano de Innovación y Tecnología</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --azul-oscuro: #0d1b2a; --azul-medio: #1b9aaa; --azul-claro: #33c3ff; --gris-claro: #f4f6f9; --texto: #333333; }
+    body { font-family: 'Open Sans', sans-serif; background: var(--gris-claro); color: var(--texto); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(13,27,42,0.98); color: #fff; padding: 14px 40px; display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(8px); }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-mark { width: 34px; height: 34px; border-radius: 8px; background: linear-gradient(135deg, var(--azul-medio), var(--azul-claro)); display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 18px; }
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-text span:first-child { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; }
+    .logo-text span:last-child { font-size: 11px; opacity: 0.8; }
+    nav { display: flex; align-items: center; gap: 22px; font-size: 14px; font-weight: 600; }
+    nav a { color: #fff; opacity: 0.85; transition: opacity 0.2s, transform 0.1s; }
+    nav a:hover { opacity: 1; transform: translateY(-1px); }
+    .btn-small { padding: 8px 16px; border-radius: 20px; border: 1px solid var(--azul-claro); background: var(--azul-claro); color: #0d1b2a; font-size: 13px; font-weight: 700; cursor: pointer; transition: transform 0.1s, box-shadow 0.15s, background 0.15s; }
+    .btn-small:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,0.18); background: #57d1ff; }
+    .hero { background: linear-gradient(rgba(13,27,42,0.9), rgba(13,27,42,0.9)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; color: white; padding: 110px 40px 90px; display: grid; grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.7fr); gap: 40px; align-items: center; }
+    .hero-main h1 { font-family: 'Montserrat', sans-serif; font-size: 36px; margin-bottom: 16px; }
+    .hero-main h1 span { color: var(--azul-claro); }
+    .hero-main p { font-size: 17px; max-width: 520px; margin-bottom: 22px; opacity: 0.95; }
+    .hero-tagline { font-size: 13px; text-transform: uppercase; letter-spacing: 1.4px; color: #c4e3ff; margin-bottom: 10px; font-weight: 600; }
+    .hero-location { font-size: 13px; opacity: 0.8; margin-bottom: 22px; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+    .btn { padding: 12px 26px; border-radius: 26px; border: none; cursor: pointer; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.1s, box-shadow 0.15s, background 0.15s, color 0.15s; }
+    .btn-primary { background: var(--azul-claro); color: #0d1b2a; box-shadow: 0 10px 28px rgba(0,0,0,0.25); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(0,0,0,0.32); background: #57d1ff; }
+    .btn-secondary { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.6); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.15); }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; margin-top: 8px; }
+    .hero-badge { padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.08); }
+    .hero-card { background: rgba(10,20,35,0.92); border-radius: 18px; padding: 20px 18px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.45); }
+    .hero-card h3 { font-family: 'Montserrat', sans-serif; font-size: 16px; margin-bottom: 10px; }
+    .hero-card p { font-size: 13px; margin-bottom: 12px; opacity: 0.9; }
+    .hero-card-list { list-style: none; font-size: 13px; margin-bottom: 14px; }
+    .hero-card-list li { margin-bottom: 6px; }
+    .hero-card-list li::before { content: "• "; color: var(--azul-claro); }
+    .hero-card-footer { font-size: 11px; opacity: 0.85; }
+    .section { padding: 60px 40px; }
+    .section-narrow { max-width: 1040px; margin: 0 auto; }
+    .section h2 { font-family: 'Montserrat', sans-serif; font-size: 26px; margin-bottom: 10px; text-align: center; color: var(--azul-oscuro); }
+    .section-subtitle { text-align: center; font-size: 14px; max-width: 540px; margin: 0 auto 32px; color: #555; }
+    .about-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr); gap: 32px; align-items: start; }
+    .about-block h3 { font-family: 'Montserrat', sans-serif; font-size: 18px; margin-bottom: 8px; color: var(--azul-oscuro); }
+    .about-block p { font-size: 14px; margin-bottom: 10px; color: #444; }
+    .about-list { font-size: 13px; list-style: none; }
+    .about-list li { margin-bottom: 6px; }
+    .about-list li::before { content: "▹ "; color: var(--azul-medio); }
+    .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .card { background: #ffffff; border-radius: 14px; padding: 18px 16px; box-shadow: 0 4px 14px rgba(15,23,42,0.06); border: 1px solid #e3e8f0; text-align: left; transition: transform 0.12s, box-shadow 0.15s, border 0.15s; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(15,23,42,0.12); border-color: #cbd5f1; }
+    .card-tag { font-size: 11px; text-transform: uppercase; letter-spacing: 1.3px; color: var(--azul-medio); margin-bottom: 6px; font-weight: 700; }
+    .card h3 { font-family: 'Montserrat', sans-serif; font-size: 15px; margin-bottom: 6px; color: var(--azul-oscuro); }
+    .card p { font-size: 13px; color: #555; }
+    .steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; font-size: 13px; }
+    .step { background: #fff; border-radius: 12px; padding: 14px 12px; text-align: center; border: 1px solid #e3e8f0; }
+    .step-number { width: 26px; height: 26px; margin: 0 auto 6px; border-radius: 999px; background: var(--azul-medio); color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+    .step-title { font-weight: 700; margin-bottom: 4px; color: var(--azul-oscuro); }
+    .testimonials { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; font-size: 13px; }
+    .testimonial-card { background: #ffffff; border-radius: 14px; padding: 16px 16px 14px; border: 1px solid #e3e8f0; box-shadow: 0 4px 14px rgba(15,23,42,0.06); }
+    .testimonial-name { font-weight: 700; margin-top: 8px; color: var(--azul-oscuro); font-size: 13px; }
+    .testimonial-role { font-size: 11px; color: #777; }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr); gap: 28px; }
+    .contact-item { font-size: 14px; }
+    .contact-item h3 { font-family: 'Montserrat', sans-serif; font-size: 16px; margin-bottom: 8px; color: var(--azul-oscuro); }
+    .contact-item p { margin-bottom: 6px; color: #444; }
+    .contact-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #777; margin-top: 8px; }
+    footer { background: #0b1725; color: #cbd5f5; padding: 18px 40px; font-size: 12px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 992px) { .hero { grid-template-columns: 1fr; padding: 90px 20px 60px; } header { padding: 12px 18px; } .section { padding: 50px 20px; } .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); } .testimonials { grid-template-columns: repeat(2, minmax(0, 1fr)); } .about-grid, .contact-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { nav { display: none; } .hero-main h1 { font-size: 26px; } .cards { grid-template-columns: 1fr; } .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } .testimonials { grid-template-columns: 1fr; } .hero-buttons { flex-direction: column; align-items: stretch; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><div class="logo-mark">I</div><div class="logo-text"><span>IDIT</span><span>Instituto Dominicano de Innovación y Tecnología</span></div></div>
+    <nav><a href="#inicio">Inicio</a><a href="#quienes">Quiénes somos</a><a href="#programas">Programas</a><a href="#como-funciona">Cómo funciona</a><a href="#contacto">Contacto</a><a href="#inscripcion" class="btn-small">Inscribirme ahora</a></nav>
+  </header>
+  <section class="hero" id="inicio">
+    <div class="hero-main">
+      <div class="hero-tagline">EDUCACIÓN TECNOLÓGICA 100% VIRTUAL</div>
+      <h1>Forma tu futuro con <span>IDIT</span></h1>
+      <p>Plataforma educativa digital desde República Dominicana para el mundo. Estudia tecnología, innovación y transformación digital desde cualquier lugar, con programas flexibles y certificados verificables.</p>
+      <p class="hero-location">Sede administrativa en Santiago de los Caballeros, RD.</p>
+      <div class="hero-buttons" id="inscripcion"><a href="https://wa.me/18094388057" target="_blank"><button class="btn btn-primary">Inscribirme por WhatsApp</button></a><a href="#programas"><button class="btn btn-secondary">Ver programas disponibles</button></a></div>
+      <div class="hero-badges"><div class="hero-badge">Clases grabadas y en vivo</div><div class="hero-badge">Certificación digital</div><div class="hero-badge">Acceso 24/7</div></div>
+    </div>
+    <div class="hero-card">
+      <h3>Plataforma educativa IDIT</h3>
+      <p>Un ecosistema digital para aprender tecnología de forma práctica: cursos, diplomados y certificaciones 100% online.</p>
+      <ul class="hero-card-list"><li>Compra de cursos y acceso inmediato</li><li>Panel del estudiante con progreso</li><li>Certificados digitales verificables</li></ul>
+      <div class="hero-card-footer">Lanza tu formación tecnológica hoy y escala con programas diseñados para el mercado actual.</div>
+    </div>
+  </section>
+  <section class="section" id="quienes">
+    <div class="section-narrow">
+      <h2>Quiénes somos</h2>
+      <p class="section-subtitle">El Instituto Dominicano de Innovación y Tecnología (IDIT) es una institución sin fines de lucro orientada a la formación tecnológica, la investigación aplicada y la innovación con enfoque 100% virtual.</p>
+      <div class="about-grid">
+        <div class="about-block">
+          <h3>Misión</h3><p>Formar profesionales y técnicos altamente competentes mediante programas tecnológicos y científicos, conectados con las necesidades del mercado y la transformación digital del país.</p>
+          <h3>Visión</h3><p>Ser el instituto líder en innovación tecnológica y educación digital en la República Dominicana, con impacto nacional e internacional.</p>
+        </div>
+        <div class="about-block">
+          <h3>Lo que nos distingue</h3>
+          <ul class="about-list"><li>Modelo 100% virtual con alcance nacional.</li><li>Programas enfocados en tecnología, innovación y emprendimiento.</li><li>Certificación digital con validación en línea.</li><li>Estructura preparada para crecer a nuevos programas y niveles.</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="programas">
+    <div class="section-narrow">
+      <h2>Áreas y programas</h2>
+      <p class="section-subtitle">Iniciamos con rutas formativas en tecnología e innovación, con cursos, diplomados y certificaciones virtuales diseñadas para el mercado laboral actual.</p>
+      <div class="cards">
+        <div class="card"><div class="card-tag">Cursos virtuales</div><h3>Inteligencia Artificial</h3><p>Introducción a IA, machine learning aplicado y casos prácticos para negocios y proyectos reales.</p></div>
+        <div class="card"><div class="card-tag">Cursos virtuales</div><h3>Ciberseguridad</h3><p>Fundamentos de seguridad, protección de datos y buenas prácticas en entornos digitales.</p></div>
+        <div class="card"><div class="card-tag">Diplomados online</div><h3>Ciencia de Datos</h3><p>Análisis de datos, visualización y toma de decisiones basada en información.</p></div>
+        <div class="card"><div class="card-tag">Certificaciones</div><h3>Programación y Desarrollo</h3><p>Rutas rápidas en desarrollo web, software y herramientas modernas para crear productos digitales.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="como-funciona" style="background:#e9f1fb;">
+    <div class="section-narrow">
+      <h2>¿Cómo funciona IDIT?</h2>
+      <p class="section-subtitle">Todo el proceso es 100% digital, desde la inscripción hasta la obtención de tu certificado, para que puedas estudiar desde cualquier lugar.</p>
+      <div class="steps">
+        <div class="step"><div class="step-number">1</div><div class="step-title">Te registras</div><div>Creas tu cuenta en la plataforma con tus datos básicos.</div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-title">Eliges tu curso</div><div>Seleccionas el programa o certificación que quieres estudiar.</div></div>
+        <div class="step"><div class="step-number">3</div><div class="step-title">Realizas el pago</div><div>Pagas en línea o a través de los medios habilitados para estudiantes.</div></div>
+        <div class="step"><div class="step-number">4</div><div class="step-title">Estudias online</div><div>Accedes a clases grabadas, recursos y sesiones en vivo 24/7.</div></div>
+        <div class="step"><div class="step-number">5</div><div class="step-title">Obtienes tu certificado</div><div>Al completar el programa recibes certificado digital verificable.</div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-narrow">
+      <h2>Orientado a impacto real</h2>
+      <p class="section-subtitle">El modelo del IDIT está diseñado como ecosistema educativo digital: formación, plataforma, certificación e ingresos sostenibles para seguir innovando.</p>
+      <div class="testimonials">
+        <div class="testimonial-card">“Nuestro objetivo es acercar la educación tecnológica de calidad a todas las provincias del país con un modelo flexible y accesible.”<div class="testimonial-name">Equipo IDIT</div><div class="testimonial-role">Dirección académica</div></div>
+        <div class="testimonial-card">“La plataforma virtual permite escalar la oferta de cursos sin necesidad de campus físico, reduciendo costos y aumentando el alcance.”<div class="testimonial-name">Coordinación de Innovación</div><div class="testimonial-role">Diseño de programas</div></div>
+        <div class="testimonial-card">“Cada curso está pensado para generar habilidades aplicables en el mercado laboral y en proyectos tecnológicos concretos.”<div class="testimonial-name">Comité Técnico</div><div class="testimonial-role">Desarrollo curricular</div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="contacto" style="background:#f0f3fa;">
+    <div class="section-narrow">
+      <h2>Contacto y sede administrativa</h2>
+      <p class="section-subtitle">El IDIT opera de forma virtual en todo el territorio nacional, con sede administrativa en Santiago de los Caballeros para gestión institucional y atención al estudiante.</p>
+      <div class="contact-grid">
+        <div class="contact-item"><h3>Canales de contacto</h3><p class="contact-label">WhatsApp</p><p><a href="https://wa.me/18094388057" target="_blank">+1 (809) 438-8057</a></p><p class="contact-label">Correo institucional</p><p>infoidit30@gmail.com</p><p>admisiones@idit.edu.do</p></div>
+        <div class="contact-item"><h3>Sede administrativa</h3><p>Santiago de los Caballeros, República Dominicana.</p><p class="contact-label">Horario de atención (virtual)</p><p>Lunes a viernes, 9:00 a.m. – 6:00 p.m.</p></div>
+      </div>
+    </div>
+  </section>
+  <footer><div>© <span id="year"></span> IDIT - Instituto Dominicano de Innovación y Tecnología. Todos los derechos reservados.</div><div>Plataforma educativa 100% virtual · Registro comercial y estatutos vigentes.</div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
