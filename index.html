@@ -54,10 +54,16 @@
         .btn { display: inline-block; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: 0.3s; }
         .btn-primary { background: var(--primary); color: #fff; }
         .btn-primary:hover { background: #0052cc; transform: translateY(-2px); }
-        .offer-section { padding: 80px 5%; text-align: center; }
+        .offer-section, .faq-section, .about-section, .testimonials-section { padding: 80px 5%; text-align: center; }
         .offer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
         .offer-card { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
         .offer-card:hover { transform: translateY(-10px); }
+        .faq-grid, .testimonials-grid { max-width: 800px; margin: 40px auto 0; text-align: left; }
+        .faq-item { background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .faq-item h4 { margin-bottom: 10px; color: var(--primary); }
+        .testimonial-card { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; margin-top: 20px; }
+        .testimonial-card p { font-style: italic; margin-bottom: 15px; }
+        .testimonial-author { font-weight: 700; color: var(--primary); }
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 1000; text-decoration: none; }
         @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; } .hero h1 { font-size: 2.2rem; } header { flex-direction: column; gap: 15px; } }
     </style>
@@ -69,10 +75,12 @@
         <nav class="nav-links">
             <a href="#inicio">Inicio</a>
             <a href="#programas">Programas</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#faq">FAQ</a>
             <a href="https://wa.me/18094388057" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 8px 16px;">Inscribirse</a>
         </nav>
     </header>
-    <section class="hero">
+    <section id="inicio" class="hero">
         <div class="hero-content">
             <div class="hero-eyebrow">Educación Tecnológica 100% Virtual</div>
             <h1>Estudia tecnología online con <span>IDIT</span> y prepárate para el mercado actual</h1>
@@ -91,8 +99,16 @@
             <div style="font-size: 0.8rem; opacity: 0.7;">Atención inmediata: 809-438-8057</div>
         </div>
     </section>
+
+    <section id="nosotros" class="about-section" style="background: #fff;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="font-family: 'Space Grotesk', sans-serif; margin-bottom: 20px;">Sobre IDIT</h2>
+            <p style="font-size: 1.1rem; color: #475569;">IDIT es el Instituto Dominicano de Innovación y Tecnología, una iniciativa enfocada en cerrar la brecha digital en República Dominicana. Nuestra misión es empoderar a profesionales y estudiantes mediante un modelo educativo 100% virtual, práctico y orientado a las competencias tecnológicas que el mercado global exige hoy.</p>
+        </div>
+    </section>
+
     <section id="programas" class="offer-section">
-        <h2>Nuestros Programas Destacados</h2>
+        <h2 style="font-family: 'Space Grotesk', sans-serif;">Nuestros Programas Destacados</h2>
         <p>Especialízate en las áreas con mayor demanda laboral.</p>
         <div class="offer-grid">
             <div class="offer-card">
@@ -109,6 +125,35 @@
             </div>
         </div>
     </section>
+
+    <section id="testimonios" class="testimonials-section" style="background: #fff;">
+        <h2 style="font-family: 'Space Grotesk', sans-serif;">Lo que dicen de nosotros</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"El enfoque práctico de IDIT es justo lo que necesitaba para actualizarme en IA sin dejar de trabajar. La modalidad virtual es muy flexible y los contenidos son de gran calidad."</p>
+                <div class="testimonial-author">— Juan Pérez, Desarrollador & Emprendedor</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <h2 style="font-family: 'Space Grotesk', sans-serif;">Preguntas Frecuentes</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>¿Los programas son 100% virtuales?</h4>
+                <p>Sí, todas nuestras clases y materiales están disponibles en línea para que estudies a tu propio ritmo desde cualquier lugar.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Recibo un certificado al finalizar?</h4>
+                <p>Sí, emitimos certificados digitales verificables que avalan tus conocimientos y competencias en el área completada.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Cómo realizo el pago?</h4>
+                <p>Aceptamos diversas modalidades de pago locales e internacionales. Consulta los detalles específicos y facilidades por WhatsApp.</p>
+            </div>
+        </div>
+    </section>
+
     <footer style="background: #0f172a; color: #fff; padding: 40px 5%; text-align: center;">
         <p>&copy; 2026 IDIT - Instituto Dominicano de Innovación y Tecnología</p>
         <p>Santiago de los Caballeros, República Dominicana</p>
