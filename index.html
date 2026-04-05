@@ -25,6 +25,67 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://alsrd.github.io/idit-web/#organization",
+        "name": "Instituto Dominicano de Innovación y Tecnología",
+        "alternateName": "IDIT",
+        "url": "https://alsrd.github.io/idit-web/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"
+        },
+        "description": "Instituto de educación tecnológica 100% virtual en República Dominicana, especializado en IA, Ciberseguridad, Ciencia de Datos y Desarrollo.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Santiago de los Caballeros",
+          "addressRegion": "Santiago",
+          "addressCountry": "DO"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-809-438-8057",
+          "contactType": "Admissions",
+          "availableLanguage": "Spanish",
+          "email": "infoidit30@gmail.com"
+        },
+        "sameAs": [
+          "https://wa.me/18094388057"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://alsrd.github.io/idit-web/#webpage",
+        "url": "https://alsrd.github.io/idit-web/",
+        "name": "IDIT – Instituto Dominicano de Innovación y Tecnología | Educación Virtual",
+        "description": "Educación tecnológica 100% virtual desde República Dominicana. Cursos en IA, Ciberseguridad, Desarrollo y más.",
+        "inLanguage": "es",
+        "isPartOf": {
+          "@id": "https://alsrd.github.io/idit-web/#organization"
+        },
+        "about": {
+          "@type": "EducationalOccupationalProgram",
+          "name": "Programas de Tecnología",
+          "provider": {
+            "@id": "https://alsrd.github.io/idit-web/#organization"
+          },
+          "educationalProgramMode": "Online",
+          "offers": {
+            "@type": "Offer",
+            "category": "Tecnología e Innovación"
+          }
+        }
+      }
+    ]
+  }
+  </script>
+
     <style>
         :root {
             --primary: #0066ff;
