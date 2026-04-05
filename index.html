@@ -69,10 +69,38 @@
     </style>
 </head>
 <body>
+      <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 16px;
+      background: #ffffff;
+      color: #0d1b2a;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible {
+      outline: 2px solid #ff8a00;
+      outline-offset: 3px;
+    }
+
     <div class="urgency-bar">🚀 Inscripciones abiertas 2026 - Cupos limitados por programa</div>
     <header>
         <div class="logo">IDIT</div>
-        <nav class="nav-links">
+        <nav class="nav-links aria-label="Navegación principal">>
             <a href="#inicio">Inicio</a>
             <a href="#programas">Programas</a>
             <a href="#nosotros">Nosotros</a>
@@ -84,6 +112,8 @@
         <div class="hero-content">
             <div class="hero-eyebrow">Educación Tecnológica 100% Virtual</div>
             <h1>Estudia tecnología online con <span>IDIT</span> y prepárate para el mercado actual</h1>
+            
+<main id="main-content">
             <p>Accede a cursos, diplomados y certificaciones en IA, Ciberseguridad, Ciencia de Datos y Desarrollo. Formación diseñada para aplicar en el trabajo real.</p>
             <a href="https://wa.me/18094388057" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Solicitar Información</a>
         </div>
@@ -158,8 +188,10 @@
         <p>&copy; 2026 IDIT - Instituto Dominicano de Innovación y Tecnología</p>
         <p>Santiago de los Caballeros, República Dominicana</p>
         <p>Email: infoidit30@gmail.com | WhatsApp: 809-438-8057</p>
+</main>
+
     </footer>
-    <a href="https://wa.me/18094388057" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/18094388057" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar al IDIT por WhatsApp">
         <span>💬</span>
     </a>
 </body>
