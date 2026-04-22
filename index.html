@@ -4,87 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDIT – Instituto Dominicano de Innovación y Tecnología | Educación Virtual</title>
-    <meta name="description" content="IDIT es la plataforma de educación tecnológica 100% virtual de República Dominicana. Cursos, diplomados y certificaciones en IA, Ciberseguridad, Ciencia de Datos y más. Inscríbete hoy.">
+    <meta name="description" content="IDIT es la plataforma de educación tecnológica 100% virtual de República Dominicana. Cursos, diplomados y certificaciones en IA, Ciberseguridad, Ciencia de Datos y Desarrollo.">
     <link rel="canonical" href="https://alsrd.github.io/idit-web/">
-    
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://alsrd.github.io/idit-web/">
-    <meta property="og:title" content="IDIT – Instituto Dominicano de Innovación y Tecnología">
+    <meta property="og:title" content="IDIT - Instituto Dominicano de Innovación y Tecnología">
     <meta property="og:description" content="Educación tecnológica 100% virtual desde República Dominicana. Cursos en IA, Ciberseguridad, Desarrollo y más.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80">
-    
+
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="IDIT – Instituto Dominicano de Innovación y Tecnología">
-    <meta name="twitter:description" content="Estudia tecnología online con IDIT: programas en Inteligencia Artificial, Ciberseguridad y Ciencia de Datos, 100% virtual desde República Dominicana.">
+    <meta name="twitter:title" content="IDIT - Instituto Dominicano de Innovación y Tecnología">
+    <meta name="twitter:description" content="Estudia tecnología online con IDIT: programas en Inteligencia Artificial, Ciberseguridad y Ciencia de Datos.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80">
     <meta name="twitter:url" content="https://alsrd.github.io/idit-web/">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    
-  
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "EducationalOrganization",
-        "@id": "https://alsrd.github.io/idit-web/#organization",
-        "name": "Instituto Dominicano de Innovación y Tecnología",
-        "alternateName": "IDIT",
-        "url": "https://alsrd.github.io/idit-web/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"
-        },
-        "description": "Instituto de educación tecnológica 100% virtual en República Dominicana, especializado en IA, Ciberseguridad, Ciencia de Datos y Desarrollo.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Santiago de los Caballeros",
-          "addressRegion": "Santiago",
-          "addressCountry": "DO"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+1-809-438-8057",
-          "contactType": "Admissions",
-          "availableLanguage": "Spanish",
-          "email": "infoidit30@gmail.com"
-        },
-        "sameAs": [
-          "https://wa.me/18094388057"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://alsrd.github.io/idit-web/#webpage",
-        "url": "https://alsrd.github.io/idit-web/",
-        "name": "IDIT – Instituto Dominicano de Innovación y Tecnología | Educación Virtual",
-        "description": "Educación tecnológica 100% virtual desde República Dominicana. Cursos en IA, Ciberseguridad, Desarrollo y más.",
-        "inLanguage": "es",
-        "isPartOf": {
-          "@id": "https://alsrd.github.io/idit-web/#organization"
-        },
-        "about": {
-          "@type": "EducationalOccupationalProgram",
-          "name": "Programas de Tecnología",
-          "provider": {
-            "@id": "https://alsrd.github.io/idit-web/#organization"
-          },
-          "educationalProgramMode": "Online",
-          "offers": {
-            "@type": "Offer",
-            "category": "Tecnología e Innovación"
-          }
-        }
-      }
-    ]
-  }
-  </script>
 
     <style>
         :root {
@@ -94,166 +34,460 @@
             --light: #f8fafc;
             --accent: #f59e0b;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
-        .urgency-bar { background: var(--accent); color: #000; text-align: center; padding: 8px; font-weight: 700; font-size: 0.9rem; }
-        header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--primary); }
-        .nav-links { display: flex; gap: 20px; }
-        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; }
-        .hero { padding: 80px 5%; display: flex; align-items: center; gap: 40px; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #fff; }
-        .hero-content { flex: 1; }
-        .hero-eyebrow { color: var(--secondary); font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
-        .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 3rem; line-height: 1.2; margin-bottom: 20px; }
-        .hero h1 span { color: var(--secondary); }
-        .hero p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; }
-        .hero-card { flex: 0.8; background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); }
-        .hero-card h3 { margin-bottom: 15px; color: var(--secondary); }
-        .hero-card ul { list-style: none; margin-bottom: 20px; }
-        .hero-card li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-        .hero-card li::before { content: '✓'; color: var(--secondary); font-weight: bold; }
-        .btn { display: inline-block; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: 0.3s; }
-        .btn-primary { background: var(--primary); color: #fff; }
-        .btn-primary:hover { background: #0052cc; transform: translateY(-2px); }
-        .offer-section, .faq-section, .about-section, .testimonials-section { padding: 80px 5%; text-align: center; }
-        .offer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .offer-card { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
-        .offer-card:hover { transform: translateY(-10px); }
-        .faq-grid, .testimonials-grid { max-width: 800px; margin: 40px auto 0; text-align: left; }
-        .faq-item { background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .faq-item h4 { margin-bottom: 10px; color: var(--primary); }
-        .testimonial-card { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; margin-top: 20px; }
-        .testimonial-card p { font-style: italic; margin-bottom: 15px; }
-        .testimonial-author { font-weight: 700; color: var(--primary); }
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 1000; text-decoration: none; }
-        @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; } .hero h1 { font-size: 2.2rem; } header { flex-direction: column; gap: 15px; } }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 16px;
+            background: #ffffff;
+            color: var(--dark);
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            text-decoration: none;
+            transition: top 0.2s;
+        }
+
+        .skip-link:focus {
+            top: 16px;
+        }
+
+        a:focus-visible, button:focus-visible, input:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        .urgency-bar {
+            background: var(--accent);
+            color: #000;
+            text-align: center;
+            padding: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        header {
+            background: #fff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            padding: 80px 5%;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #fff;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-eyebrow {
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--secondary);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-card {
+            flex: 0.8;
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-card h3 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .hero-card ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .hero-card li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-card li::before {
+            content: '✓';
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #0052cc;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 80px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            color: var(--dark);
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .offer-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        .faq-item h4 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .testimonial-section {
+            background: #f1f5f9;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 60px 5% 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 40px;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 40px;
+            }
+            .hero h1 { font-size: 2.2rem; }
+            header { flex-direction: column; gap: 15px; }
+            .nav-links { font-size: 0.9rem; }
+        }
     </style>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://alsrd.github.io/idit-web/#organization",
+          "name": "Instituto Dominicano de Innovación y Tecnología",
+          "alternateName": "IDIT",
+          "url": "https://alsrd.github.io/idit-web/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"
+          },
+          "description": "Instituto de educación tecnológica 100% virtual en República Dominicana.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Santiago de los Caballeros",
+            "addressRegion": "Santiago",
+            "addressCountry": "DO"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-809-438-8057",
+            "contactType": "Admissions",
+            "email": "infoidit30@gmail.com"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://alsrd.github.io/idit-web/#webpage",
+          "url": "https://alsrd.github.io/idit-web/",
+          "name": "IDIT – Instituto Dominicano de Innovación y Tecnología",
+          "inLanguage": "es",
+          "isPartOf": { "@id": "https://alsrd.github.io/idit-web/#organization" }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
-      <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 16px;
-      background: #ffffff;
-      color: #0d1b2a;
-      padding: 8px 12px;
-      border-radius: 4px;
-      font-size: 14px;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-      text-decoration: none;
-    }
 
-    .skip-link:focus {
-      top: 16px;
-    }
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible,
-    select:focus-visible {
-      outline: 2px solid #ff8a00;
-      outline-offset: 3px;
-    }
+    <div class="urgency-bar">
+        🚀 Inscripciones abiertas 2026 - Cupos limitados por programa
+    </div>
 
-    <div class="urgency-bar">🚀 Inscripciones abiertas 2026 - Cupos limitados por programa</div>
     <header>
-        <div class="logo">IDIT</div>
-        <nav class="nav-links aria-label="Navegación principal">>
+        <a href="#" class="logo">IDIT</a>
+        <nav class="nav-links">
             <a href="#inicio">Inicio</a>
             <a href="#programas">Programas</a>
             <a href="#nosotros">Nosotros</a>
             <a href="#faq">FAQ</a>
-            <a href="https://wa.me/18094388057" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 8px 16px;">Inscribirse</a>
+            <a href="https://wa.me/18094388057" class="btn btn-primary" style="padding: 8px 16px;">Inscribirse</a>
         </nav>
     </header>
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <div class="hero-eyebrow">Educación Tecnológica 100% Virtual</div>
-            <h1>Estudia tecnología online con <span>IDIT</span> y prepárate para el mercado actual</h1>
-            
-<main id="main-content">
-            <p>Accede a cursos, diplomados y certificaciones en IA, Ciberseguridad, Ciencia de Datos y Desarrollo. Formación diseñada para aplicar en el trabajo real.</p>
-            <a href="https://wa.me/18094388057" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Solicitar Información</a>
-        </div>
-        <div class="hero-card">
-            <h3>Empieza hoy mismo</h3>
-            <p>Elige tu programa y recibe orientación directa por WhatsApp.</p>
-            <ul>
-                <li>Acceso 24/7 desde cualquier dispositivo</li>
-                <li>Certificados digitales verificables</li>
-                <li>Soporte técnico y académico</li>
-                <li>Formación práctica y actualizada</li>
-            </ul>
-            <div style="font-size: 0.8rem; opacity: 0.7;">Atención inmediata: 809-438-8057</div>
-        </div>
-    </section>
 
-    <section id="nosotros" class="about-section" style="background: #fff;">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h2 style="font-family: 'Space Grotesk', sans-serif; margin-bottom: 20px;">Sobre IDIT</h2>
-            <p style="font-size: 1.1rem; color: #475569;">IDIT es el Instituto Dominicano de Innovación y Tecnología, una iniciativa enfocada en cerrar la brecha digital en República Dominicana. Nuestra misión es empoderar a profesionales y estudiantes mediante un modelo educativo 100% virtual, práctico y orientado a las competencias tecnológicas que el mercado global exige hoy.</p>
-        </div>
-    </section>
+    <main id="main-content">
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="hero-eyebrow">Educación Tecnológica 100% Virtual</span>
+                <h1>Estudia tecnología online con <span>IDIT</span> y prepárate para el mercado</h1>
+                <p>Accede a cursos, diplomados y certificaciones en IA, Ciberseguridad, Ciencia de Datos y Desarrollo. Formación diseñada para el mundo real.</p>
+                <a href="https://wa.me/18094388057" class="btn btn-primary">Solicitar Información</a>
+            </div>
+            <div class="hero-card">
+                <h3>Empieza hoy mismo</h3>
+                <p>Recibe orientación directa por WhatsApp.</p>
+                <ul>
+                    <li>Acceso 24/7 desde cualquier dispositivo</li>
+                    <li>Certificados digitales verificables</li>
+                    <li>Soporte técnico y académico</li>
+                    <li>Formación práctica y actualizada</li>
+                </ul>
+                <p style="font-weight: bold; font-size: 0.9rem;">Atención inmediata: 809-438-8057</p>
+            </div>
+        </section>
 
-    <section id="programas" class="offer-section">
-        <h2 style="font-family: 'Space Grotesk', sans-serif;">Nuestros Programas Destacados</h2>
-        <p>Especialízate en las áreas con mayor demanda laboral.</p>
-        <div class="offer-grid">
-            <div class="offer-card">
-                <h3>IA & Automatización</h3>
-                <p>Domina las herramientas de Inteligencia Artificial para optimizar procesos.</p>
+        <section id="nosotros" class="about-section">
+            <div class="section-title">
+                <h2>Sobre IDIT</h2>
             </div>
-            <div class="offer-card">
-                <h3>Ciberseguridad</h3>
-                <p>Aprende a proteger infraestructuras digitales y datos críticos.</p>
-            </div>
-            <div class="offer-card">
-                <h3>Ciencia de Datos</h3>
-                <p>Transforma datos en decisiones estratégicas para empresas.</p>
-            </div>
-        </div>
-    </section>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                IDIT es el Instituto Dominicano de Innovación y Tecnología, una iniciativa enfocada en cerrar la brecha digital en República Dominicana. Nuestra misión es empoderar a profesionales y estudiantes mediante un modelo educativo 100% virtual, práctico y orientado a las competencias tecnológicas que el mercado global exige hoy.
+            </p>
+        </section>
 
-    <section id="testimonios" class="testimonials-section" style="background: #fff;">
-        <h2 style="font-family: 'Space Grotesk', sans-serif;">Lo que dicen de nosotros</h2>
-        <div class="testimonials-grid">
+        <section id="programas" class="offer-section">
+            <div class="section-title">
+                <h2>Programas Destacados</h2>
+                <p>Especialízate en las áreas con mayor demanda laboral</p>
+            </div>
+            <div class="offer-grid">
+                <div class="offer-card">
+                    <h3>IA & Automatización</h3>
+                    <p>Domina las herramientas de Inteligencia Artificial para optimizar procesos.</p>
+                </div>
+                <div class="offer-card">
+                    <h3>Ciberseguridad</h3>
+                    <p>Aprende a proteger infraestructuras digitales y datos críticos.</p>
+                </div>
+                <div class="offer-card">
+                    <h3>Ciencia de Datos</h3>
+                    <p>Transforma datos en decisiones estratégicas para empresas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="section-title">
+                <h2>Lo que dicen de nosotros</h2>
+            </div>
             <div class="testimonial-card">
                 <p>"El enfoque práctico de IDIT es justo lo que necesitaba para actualizarme en IA sin dejar de trabajar. La modalidad virtual es muy flexible y los contenidos son de gran calidad."</p>
-                <div class="testimonial-author">— Juan Pérez, Desarrollador & Emprendedor</div>
+                <span class="testimonial-author">— Juan Pérez, Desarrollador & Emprendedor</span>
             </div>
+        </section>
+
+        <section id="faq" class="faq-section">
+            <div class="section-title">
+                <h2>Preguntas Frecuentes</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>¿Los programas son 100% virtuales?</h4>
+                    <p>Sí, todas nuestras clases y materiales están disponibles en línea para que estudies a tu propio ritmo desde cualquier lugar.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Recibo un certificado al finalizar?</h4>
+                    <p>Sí, emitimos certificados digitales verificables que avalan tus conocimientos y competencias en el área completada.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Cómo realizo el pago?</h4>
+                    <p>Aceptamos diversas modalidades de pago locales e internacionales. Consulta los detalles por WhatsApp.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; margin-bottom: 10px;">© 2026 IDIT - Instituto Dominicano de Innovación y Tecnología</p>
+            <p>Santiago de los Caballeros, República Dominicana</p>
+            <p>Email: infoidit30@gmail.com | WhatsApp: 809-438-8057</p>
         </div>
-    </section>
-
-    <section id="faq" class="faq-section">
-        <h2 style="font-family: 'Space Grotesk', sans-serif;">Preguntas Frecuentes</h2>
-        <div class="faq-grid">
-            <div class="faq-item">
-                <h4>¿Los programas son 100% virtuales?</h4>
-                <p>Sí, todas nuestras clases y materiales están disponibles en línea para que estudies a tu propio ritmo desde cualquier lugar.</p>
-            </div>
-            <div class="faq-item">
-                <h4>¿Recibo un certificado al finalizar?</h4>
-                <p>Sí, emitimos certificados digitales verificables que avalan tus conocimientos y competencias en el área completada.</p>
-            </div>
-            <div class="faq-item">
-                <h4>¿Cómo realizo el pago?</h4>
-                <p>Aceptamos diversas modalidades de pago locales e internacionales. Consulta los detalles específicos y facilidades por WhatsApp.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer style="background: #0f172a; color: #fff; padding: 40px 5%; text-align: center;">
-        <p>&copy; 2026 IDIT - Instituto Dominicano de Innovación y Tecnología</p>
-        <p>Santiago de los Caballeros, República Dominicana</p>
-        <p>Email: infoidit30@gmail.com | WhatsApp: 809-438-8057</p>
-</main>
-
     </footer>
-    <a href="https://wa.me/18094388057" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar al IDIT por WhatsApp">
-        <span>💬</span>
+
+    <a href="https://wa.me/18094388057" class="whatsapp-float" aria-label="Contacto por WhatsApp">
+        💬
     </a>
+
 </body>
 </html>
