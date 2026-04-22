@@ -14,13 +14,6 @@
     <meta property="og:description" content="Educación tecnológica 100% virtual desde República Dominicana. Cursos en IA, Ciberseguridad, Desarrollo y más.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80">
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="IDIT - Instituto Dominicano de Innovación y Tecnología">
-    <meta name="twitter:description" content="Estudia tecnología online con IDIT: programas en Inteligencia Artificial, Ciberseguridad y Ciencia de Datos.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80">
-    <meta name="twitter:url" content="https://alsrd.github.io/idit-web/">
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,11 +61,6 @@
             top: 16px;
         }
 
-        a:focus-visible, button:focus-visible, input:focus-visible {
-            outline: 2px solid var(--accent);
-            outline-offset: 3px;
-        }
-
         .urgency-bar {
             background: var(--accent);
             color: #000;
@@ -105,17 +93,13 @@
         .nav-links {
             display: flex;
             gap: 20px;
+            align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--dark);
             font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
         }
 
         .hero {
@@ -131,15 +115,6 @@
             flex: 1;
         }
 
-        .hero-eyebrow {
-            color: var(--secondary);
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: block;
-        }
-
         .hero h1 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 3rem;
@@ -151,13 +126,6 @@
             color: var(--secondary);
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 30px;
-            max-width: 600px;
-        }
-
         .hero-card {
             flex: 0.8;
             background: rgba(255,255,255,0.05);
@@ -165,29 +133,6 @@
             border-radius: 20px;
             border: 1px solid rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
-        }
-
-        .hero-card h3 {
-            margin-bottom: 15px;
-            color: var(--secondary);
-        }
-
-        .hero-card ul {
-            list-style: none;
-            margin-bottom: 20px;
-        }
-
-        .hero-card li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .hero-card li::before {
-            content: '✓';
-            color: var(--secondary);
-            font-weight: bold;
         }
 
         .btn {
@@ -217,87 +162,114 @@
 
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .section-title h2 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 2.5rem;
-            color: var(--dark);
+            margin-bottom: 10px;
         }
 
-        .offer-grid {
+        /* Course Grid Layout */
+        .course-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
-        .offer-card {
+        .course-card {
             background: #fff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: 0.3s;
-            text-align: center;
-        }
-
-        .offer-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .faq-grid {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: left;
-        }
-
-        .faq-item h4 {
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-
-        .testimonial-section {
-            background: #f1f5f9;
-        }
-
-        .testimonial-card {
-            background: #fff;
-            padding: 40px;
             border-radius: 20px;
+            overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            max-width: 700px;
-            margin: 0 auto;
-            position: relative;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
         }
 
-        .testimonial-card p {
-            font-style: italic;
-            font-size: 1.2rem;
+        .course-header {
+            padding: 25px;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .course-header h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .course-meta {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        .course-body {
+            padding: 25px;
+            flex: 1;
+        }
+
+        .course-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pensum-box {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 10px;
             margin-bottom: 20px;
         }
 
-        .testimonial-author {
-            font-weight: 700;
+        .pensum-box h4 {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 5px;
+        }
+
+        .pensum-list {
+            list-style: none;
+            font-size: 0.85rem;
+        }
+
+        .pensum-list li {
+            margin-bottom: 5px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .pensum-list li::before {
+            content: '•';
             color: var(--primary);
         }
 
-        footer {
-            background: var(--dark);
-            color: #fff;
-            padding: 60px 5% 30px;
-            text-align: center;
+        .course-footer {
+            padding: 25px;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .footer-content {
-            margin-bottom: 40px;
+        .course-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
         }
 
         .whatsapp-float {
@@ -316,178 +288,163 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             z-index: 1000;
             text-decoration: none;
-            transition: transform 0.3s;
         }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
+        footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 60px 5% 30px;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding-top: 40px;
-            }
-            .hero h1 { font-size: 2.2rem; }
+            .hero { flex-direction: column; text-align: center; }
             header { flex-direction: column; gap: 15px; }
-            .nav-links { font-size: 0.9rem; }
         }
     </style>
-
-    <!-- JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "EducationalOrganization",
-          "@id": "https://alsrd.github.io/idit-web/#organization",
-          "name": "Instituto Dominicano de Innovación y Tecnología",
-          "alternateName": "IDIT",
-          "url": "https://alsrd.github.io/idit-web/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"
-          },
-          "description": "Instituto de educación tecnológica 100% virtual en República Dominicana.",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Santiago de los Caballeros",
-            "addressRegion": "Santiago",
-            "addressCountry": "DO"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-809-438-8057",
-            "contactType": "Admissions",
-            "email": "infoidit30@gmail.com"
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://alsrd.github.io/idit-web/#webpage",
-          "url": "https://alsrd.github.io/idit-web/",
-          "name": "IDIT – Instituto Dominicano de Innovación y Tecnología",
-          "inLanguage": "es",
-          "isPartOf": { "@id": "https://alsrd.github.io/idit-web/#organization" }
-        }
-      ]
-    }
-    </script>
 </head>
 <body>
 
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
     <div class="urgency-bar">
-        🚀 Inscripciones abiertas 2026 - Cupos limitados por programa
+        🚀 Próximos inicios Mayo 2026 - ¡Reserva tu cupo hoy!
     </div>
 
     <header>
         <a href="#" class="logo">IDIT</a>
         <nav class="nav-links">
             <a href="#inicio">Inicio</a>
-            <a href="#programas">Programas</a>
+            <a href="#programas">Cursos</a>
             <a href="#nosotros">Nosotros</a>
-            <a href="#faq">FAQ</a>
-            <a href="https://wa.me/18094388057" class="btn btn-primary" style="padding: 8px 16px;">Inscribirse</a>
+            <a href="https://wa.me/18094388057" class="btn btn-primary" style="padding: 8px 16px;">Soporte</a>
         </nav>
     </header>
 
     <main id="main-content">
+        <!-- Hero Section -->
         <section class="hero" id="inicio">
             <div class="hero-content">
-                <span class="hero-eyebrow">Educación Tecnológica 100% Virtual</span>
-                <h1>Estudia tecnología online con <span>IDIT</span> y prepárate para el mercado</h1>
-                <p>Accede a cursos, diplomados y certificaciones en IA, Ciberseguridad, Ciencia de Datos y Desarrollo. Formación diseñada para el mundo real.</p>
-                <a href="https://wa.me/18094388057" class="btn btn-primary">Solicitar Información</a>
+                <h1>Plataforma de Educación en <span>Tecnología e Innovación</span></h1>
+                <p>Cursos prácticos con metodología 100% online. Recibe tu matrícula de estudiante IDIT al inscribirte.</p>
+                <a href="#programas" class="btn btn-primary">Ver Catálogo de Cursos</a>
             </div>
             <div class="hero-card">
-                <h3>Empieza hoy mismo</h3>
-                <p>Recibe orientación directa por WhatsApp.</p>
-                <ul>
-                    <li>Acceso 24/7 desde cualquier dispositivo</li>
-                    <li>Certificados digitales verificables</li>
-                    <li>Soporte técnico y académico</li>
-                    <li>Formación práctica y actualizada</li>
-                </ul>
-                <p style="font-weight: bold; font-size: 0.9rem;">Atención inmediata: 809-438-8057</p>
+                <h3>Acceso a la Sala Online</h3>
+                <p>Para ingresar a tu curso:</p>
+                <ol style="margin: 15px 0; padding-left: 20px; font-size: 0.9rem;">
+                    <li>Selecciona tu curso e inscríbete.</li>
+                    <li>Realiza el pago vía transferencia o PayPal.</li>
+                    <li>Recibe tu **ID Estudiante (Matrícula)** por email.</li>
+                    <li>Usa tu ID para entrar a la Sala Virtual IDIT el día de clase.</li>
+                </ol>
             </div>
         </section>
 
-        <section id="nosotros" class="about-section">
+        <!-- Programas Section -->
+        <section id="programas">
             <div class="section-title">
-                <h2>Sobre IDIT</h2>
+                <h2>Cursos y Especializaciones</h2>
+                <p>Explora nuestra oferta académica para el 2026</p>
             </div>
-            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
-                IDIT es el Instituto Dominicano de Innovación y Tecnología, una iniciativa enfocada en cerrar la brecha digital en República Dominicana. Nuestra misión es empoderar a profesionales y estudiantes mediante un modelo educativo 100% virtual, práctico y orientado a las competencias tecnológicas que el mercado global exige hoy.
-            </p>
-        </section>
 
-        <section id="programas" class="offer-section">
-            <div class="section-title">
-                <h2>Programas Destacados</h2>
-                <p>Especialízate en las áreas con mayor demanda laboral</p>
-            </div>
-            <div class="offer-grid">
-                <div class="offer-card">
-                    <h3>IA & Automatización</h3>
-                    <p>Domina las herramientas de Inteligencia Artificial para optimizar procesos.</p>
-                </div>
-                <div class="offer-card">
-                    <h3>Ciberseguridad</h3>
-                    <p>Aprende a proteger infraestructuras digitales y datos críticos.</p>
-                </div>
-                <div class="offer-card">
-                    <h3>Ciencia de Datos</h3>
-                    <p>Transforma datos en decisiones estratégicas para empresas.</p>
-                </div>
-            </div>
-        </section>
+            <div class="course-grid">
+                <!-- Curso 1 -->
+                <article class="course-card">
+                    <div class="course-header">
+                        <span class="course-meta">Inteligencia Artificial</span>
+                        <h3>Prompt Engineering Avanzado</h3>
+                    </div>
+                    <div class="course-body">
+                        <div class="course-info">
+                            <div class="info-item">📅 **Inicia:** 15 de Mayo, 2026</div>
+                            <div class="info-item">⏰ **Horario:** Sábados 9:00 AM - 12:00 PM</div>
+                            <div class="info-item">🌐 **Modalidad:** Sala Online IDIT (En vivo)</div>
+                        </div>
+                        <div class="pensum-box">
+                            <h4>Pensum del Curso</h4>
+                            <ul class="pensum-list">
+                                <li>Arquitectura de LLMs y Tokens</li>
+                                <li>Técnicas de Few-shot y Chain-of-Thought</li>
+                                <li>Automatización de flujos con Agentes IA</li>
+                                <li>Ética y seguridad en IA generativa</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-price">RD$ 4,500</span>
+                        <a href="https://wa.me/18094388057?text=Hola,%20quiero%20inscribirme%20en%20el%20curso%20de%20Prompt%20Engineering" class="btn btn-primary">Inscribirse</a>
+                    </div>
+                </article>
 
-        <section class="testimonial-section">
-            <div class="section-title">
-                <h2>Lo que dicen de nosotros</h2>
-            </div>
-            <div class="testimonial-card">
-                <p>"El enfoque práctico de IDIT es justo lo que necesitaba para actualizarme en IA sin dejar de trabajar. La modalidad virtual es muy flexible y los contenidos son de gran calidad."</p>
-                <span class="testimonial-author">— Juan Pérez, Desarrollador & Emprendedor</span>
-            </div>
-        </section>
+                <!-- Curso 2 -->
+                <article class="course-card">
+                    <div class="course-header">
+                        <span class="course-meta">Ciberseguridad</span>
+                        <h3>Hacking Ético & Pentesting</h3>
+                    </div>
+                    <div class="course-body">
+                        <div class="course-info">
+                            <div class="info-item">📅 **Inicia:** 18 de Mayo, 2026</div>
+                            <div class="info-item">⏰ **Horario:** Lun y Mié 7:00 PM - 9:00 PM</div>
+                            <div class="info-item">🌐 **Modalidad:** Sala Online IDIT (En vivo)</div>
+                        </div>
+                        <div class="pensum-box">
+                            <h4>Pensum del Curso</h4>
+                            <ul class="pensum-list">
+                                <li>Recopilación de información (OSINT)</li>
+                                <li>Análisis de vulnerabilidades web</li>
+                                <li>Explotación y post-explotación</li>
+                                <li>Reportes técnicos profesionales</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-price">RD$ 6,000</span>
+                        <a href="https://wa.me/18094388057?text=Hola,%20quiero%20inscribirme%20en%20el%20curso%20de%20Hacking%20Ético" class="btn btn-primary">Inscribirse</a>
+                    </div>
+                </article>
 
-        <section id="faq" class="faq-section">
-            <div class="section-title">
-                <h2>Preguntas Frecuentes</h2>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h4>¿Los programas son 100% virtuales?</h4>
-                    <p>Sí, todas nuestras clases y materiales están disponibles en línea para que estudies a tu propio ritmo desde cualquier lugar.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>¿Recibo un certificado al finalizar?</h4>
-                    <p>Sí, emitimos certificados digitales verificables que avalan tus conocimientos y competencias en el área completada.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>¿Cómo realizo el pago?</h4>
-                    <p>Aceptamos diversas modalidades de pago locales e internacionales. Consulta los detalles por WhatsApp.</p>
-                </div>
+                <!-- Curso 3 -->
+                <article class="course-card">
+                    <div class="course-header">
+                        <span class="course-meta">Desarrollo Web</span>
+                        <h3>Fullstack con Next.js & Firebase</h3>
+                    </div>
+                    <div class="course-body">
+                        <div class="course-info">
+                            <div class="info-item">📅 **Inicia:** 20 de Mayo, 2026</div>
+                            <div class="info-item">⏰ **Horario:** Mar y Jue 6:00 PM - 8:00 PM</div>
+                            <div class="info-item">🌐 **Modalidad:** Sala Online IDIT (En vivo)</div>
+                        </div>
+                        <div class="pensum-box">
+                            <h4>Pensum del Curso</h4>
+                            <ul class="pensum-list">
+                                <li>Server Side Rendering (SSR) y Static Props</li>
+                                <li>Autenticación y Firestore Real-time</li>
+                                <li>Despliegue escalable en Vercel</li>
+                                <li>Integración de pasarelas de pago</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-price">RD$ 5,500</span>
+                        <a href="https://wa.me/18094388057?text=Hola,%20quiero%20inscribirme%20en%20el%20curso%20de%20Fullstack" class="btn btn-primary">Inscribirse</a>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-            <p style="font-weight: bold; margin-bottom: 10px;">© 2026 IDIT - Instituto Dominicano de Innovación y Tecnología</p>
-            <p>Santiago de los Caballeros, República Dominicana</p>
-            <p>Email: infoidit30@gmail.com | WhatsApp: 809-438-8057</p>
+            <p><strong>© 2026 IDIT - Instituto Dominicano de Innovación y Tecnología</strong></p>
+            <p>Santiago, República Dominicana | infoidit30@gmail.com</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Al inscribirte, se te asignará una matrícula estudiantil única para acceso a nuestra Sala Online.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/18094388057" class="whatsapp-float" aria-label="Contacto por WhatsApp">
-        💬
-    </a>
+    <a href="https://wa.me/18094388057" class="whatsapp-float">💬</a>
 
 </body>
 </html>
